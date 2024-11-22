@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Create
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -173,6 +174,20 @@ fun MatakuliahView(
                             )
                         }
                     }
+                }
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // Action Button (Simpan Only)
+                Button(
+                    onClick = {
+                        listData.clear()
+                        listData.add(mataKuliah)
+                        listData.add(selectedKelas)
+                        onSimpanButtonClicked(listData)
+                    },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(text = "Submit")
                 }
             }
         }
