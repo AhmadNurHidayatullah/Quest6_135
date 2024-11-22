@@ -115,6 +115,15 @@ fun MatakuliahView(
                         modifier = Modifier.padding(start = 16.dp)
                     )
                 }
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // Input Mata Kuliah
+                Text(
+                    text = "Masukkan Data Mata Kuliah",
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black
+                )
 
             }
         }
