@@ -2,12 +2,14 @@ package com.example.lamborgini.ui.view.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -90,6 +92,29 @@ fun MatakuliahView(
                     fontWeight = FontWeight.Bold,
                     color = Color.Black
                 )
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Mahasiswa Info
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(8.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(
+                        modifier = Modifier.weight(1f) // Adjust spacing for proper alignment
+                    ) {
+                        Text(text = "NIM: ${uiState.nim}", fontSize = 16.sp, color = Color.Black)
+                        Text(text = "Nama: ${uiState.nama}", fontSize = 16.sp, color = Color.Black)
+                    }
+                    Text(
+                        text = uiState.email,
+                        fontSize = 16.sp,
+                        color = Color.Black,
+                        modifier = Modifier.padding(start = 16.dp)
+                    )
+                }
 
             }
         }
