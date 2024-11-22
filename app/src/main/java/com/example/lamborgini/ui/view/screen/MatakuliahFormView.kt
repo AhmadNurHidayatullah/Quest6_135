@@ -142,6 +142,16 @@ fun MatakuliahView(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(50.dp)
                 )
+                Spacer(modifier = Modifier.height(16.dp))
+
+
+                // Radio Buttons for Kelas
+                Text(
+                    text = "Pilih Kelas:",
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black
+                )
 
             }
         }
