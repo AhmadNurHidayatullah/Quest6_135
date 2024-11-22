@@ -14,6 +14,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Create
+import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -123,6 +127,20 @@ fun MatakuliahView(
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                OutlinedTextField(
+                    value = mataKuliah,
+                    onValueChange = { mataKuliah = it },
+                    label = { Text("Mata Kuliah") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Create,
+                            contentDescription = "Mata Kuliah"
+                        )
+                    },
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(50.dp)
                 )
 
             }
