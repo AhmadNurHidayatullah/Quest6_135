@@ -18,6 +18,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Create
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -152,7 +153,27 @@ fun MatakuliahView(
                     fontWeight = FontWeight.Bold,
                     color = Color.Black
                 )
-
+                Spacer(modifier = Modifier.height(8.dp))
+                val listKelas = listOf("A", "B", "C", "D")
+                Column {
+                    listKelas.forEach { kelas ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.padding(vertical = 4.dp)
+                        ) {
+                            RadioButton(
+                                selected = selectedKelas == kelas,
+                                onClick = { selectedKelas = kelas }
+                            )
+                            Text(
+                                text = "Kelas $kelas",
+                                fontSize = 16.sp,
+                                modifier = Modifier.padding(start = 8.dp),
+                                color = Color.Black
+                            )
+                        }
+                    }
+                }
             }
         }
     }
