@@ -24,4 +24,12 @@ class MahasiswaViewModel : ViewModel() {
             )
         }
     }
+    fun setMatakuliah(ls: MutableList<String>){
+        _statusUI.update { statusSaatIni ->
+            statusSaatIni.copy(
+                matakuliah = ls[0],
+                kelas = ls[1],
+            )
+        }
+    }
 }
