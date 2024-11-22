@@ -22,8 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             LamborginiTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Hello Android",
+                    MahasiswaApp(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
